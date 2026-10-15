@@ -19,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
 
@@ -78,7 +79,9 @@ fun FormDataDiri(modifier: Modifier){
                 bottom =
                     dimensionResource(id = R.dimen.padding_sedang),
                 top = dimensionResource(id = R.dimen.padding_sedang)
-            )
+            ),
+            thickness = dimensionResource(id = R.dimen.divider_titpis),
+            color = Color.DarkGray
         )
     }
 }
