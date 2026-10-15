@@ -73,6 +73,12 @@ fun FormDataDiri(modifier: Modifier){
                 textAlamat = it
             }
         )
-
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                bottom =
+                    dimensionResource(id = R.dimen.padding_sedang),
+                top = dimensionResource(id = R.dimen.padding_sedang)
+            )
+        )
     }
 }
