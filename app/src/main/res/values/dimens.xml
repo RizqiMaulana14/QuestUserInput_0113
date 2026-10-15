@@ -2,4 +2,5 @@
 <resources>
     <dimen name="padding_kecil">10dp</dimen>
     <dimen name="padding_sedang">30dp</dimen>
+    <dimen name="divider_titpis">1dp</dimen>
 </resources>
