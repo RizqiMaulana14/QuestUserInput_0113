@@ -14,4 +14,7 @@ fun FormDataDiri(modifier: Modifier){
     var textAlamat by remember { mutableStateOf(value = "") }
     var textJK by remember { mutableStateOf(value = "")}
     var gender:List<String> = listOf("Laki-laki", "Perempuan")
+
+    //Variable-variabel untuk menyimpan data yang diperoleh dari komponen UI
+    var nama by remember { mutableStateOf(value = "")}
 }
