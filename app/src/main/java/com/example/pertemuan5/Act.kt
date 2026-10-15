@@ -3,6 +3,8 @@ package com.example.pertemuan5
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -25,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -58,7 +61,7 @@ fun FormDataDiri(modifier: Modifier){
                 Row(modifier = Modifier.selectable(
                     selected = textJK == item,
                     onClick = {textJK = item}
-                ), verticalAlignment = Alignment.CenterHorizontally)
+                ), verticalAlignment = Alignment.CenterVertically)
                 {
                     RadioButton(
                         selected = textJK == item,
@@ -87,7 +90,15 @@ fun FormDataDiri(modifier: Modifier){
             thickness = dimensionResource(id = R.dimen.divider_titpis),
             color = Color.DarkGray
         )
-        Button() { }
+        Button(modifier = Modifier.fillMaxWidth(fraction = 1f),
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama = textNama
+                jenis = textJK
+                alamat = textAlamat
+            }) {
+            Text(stringResource(id = R.string.submit))
+        }
         HorizontalDivider(
             modifier = Modifier.padding(
                 bottom =
